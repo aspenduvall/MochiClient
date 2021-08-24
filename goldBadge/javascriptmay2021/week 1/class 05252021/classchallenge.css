@@ -1,0 +1,57 @@
+#main {
+    border: 5px solid black;
+    border-radius: 25px 0 25px 0;
+    background-color: gray;
+}
+
+#flex {
+    display: flex;
+}
+
+h1 {
+    color: lightgreen;
+    text-align: center;
+}
+
+h3 {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+table {
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: lightskyblue;
+}
+
+.movietitle {
+    font-style: italic;
+}
+
+.lie1 {
+    border: 5px solid black;
+    border-radius: 25px 0 25px 0;
+    background-color: lightgray;
+    text-align: center;
+    flex: 1;
+}
+
+.lie2 {
+    border: 5px solid black;
+    border-radius: 25px 0 25px 0;
+    background-color: lightgray;
+    text-align: center;
+    flex: 1;
+}
+
+.lie3 {
+    border: 5px solid black;
+    border-radius: 25px 0 25px 0;
+    background-color: lightgray;
+    text-align: center;
+    flex: 1;
+}

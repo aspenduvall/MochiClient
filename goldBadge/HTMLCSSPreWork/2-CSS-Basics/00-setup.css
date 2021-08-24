@@ -1,0 +1,10 @@
+/* Here's a fun comment */
+
+body {
+    background-color: #3B3B3B;
+    color: #ffffff;
+}
+
+.wrapper {
+    border: 10px solid red;
+}
