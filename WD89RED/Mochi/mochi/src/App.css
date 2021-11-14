@@ -84,6 +84,7 @@ body {
 
 .commentlinks:hover {
   color: #C60074;
+  cursor: pointer;
   transition: 1s ease-in-out;
 }
 
@@ -210,6 +211,10 @@ h2 {
   font-family: "Hi Melody", cursive;
   color: #ffffff;
   font-size: 72pt !important;
+}
+
+h2:hover {
+  cursor: pointer;
 }
 
 h3 {

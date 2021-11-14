@@ -49,7 +49,6 @@ export default class PostTable extends React.Component {
     const isAdmin = localStorage.getItem("admin");
     return this.props.posts.length > 0
       ? this.props.posts.map((post, index) => {
-          console.log(post.id);
           this.props.posts.sort(function (a, b) {
             return (
               new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
@@ -59,8 +58,11 @@ export default class PostTable extends React.Component {
             post.userId === Number(this.props.userID) || isAdmin === "true";
           return (
             <div class="content" key={index}>
-              <p class="postusername">posted by {post.user.username}</p>
+              <p class="postusername">posted by {post.user.username}, at {post.createdAt}</p>
+              <br />
+              <br />
               <h3>{post.title}</h3>
+              <br />
               <p>{post.content}</p>
               <div>
                 <img
@@ -87,7 +89,7 @@ export default class PostTable extends React.Component {
               <CommentIndex
                 postID={post.id}
                 userID={this.props.userID}
-                username={post.user.username}
+                username={this.props.username}
                 admin={this.props.admin}
                 updateOff={this.props.updateOff}
                 token={this.props.token}

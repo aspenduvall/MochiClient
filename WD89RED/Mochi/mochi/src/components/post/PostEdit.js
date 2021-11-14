@@ -15,12 +15,18 @@ export default class PostEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editTitle: this.props.title,
-      editContent: this.props.content,
-      editTags: this.props.tags,
-      editImage: this.props.image,
+      editTitle: "",
+      editContent: "",
+      editTags: "",
+      editImage: "",
       modal: false,
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if(this.props.title !== prevProps.title) {
+      this.fetchData(this.props.title);
+    }
   }
 
   postUpdate = (event, post) => {
@@ -64,7 +70,7 @@ export default class PostEdit extends React.Component {
                 <Label htmlFor="title">edit title</Label>
                 <Input
                   name="title"
-                  value={this.state.editTitle}
+                  defaultValue={this.props.title}
                   onChange={(e) => this.setState({ editTitle: e.target.value })}
                 />
               </FormGroup>
@@ -73,7 +79,7 @@ export default class PostEdit extends React.Component {
                 <Input
                   name="content"
                   type="textarea"
-                  value={this.state.editContent}
+                  defaultValue={this.props.content}
                   onChange={(e) =>
                     this.setState({ editContent: e.target.value })
                   }

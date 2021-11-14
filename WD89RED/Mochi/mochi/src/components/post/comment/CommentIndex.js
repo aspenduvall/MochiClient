@@ -52,6 +52,7 @@ export default class CommentIndex extends React.Component {
               fetchComments={this.fetchComments}
               token={this.props.token}
               postID={this.props.postID}
+              username={this.props.username}
             />
             <CommentTable
               comments={this.state.comments}

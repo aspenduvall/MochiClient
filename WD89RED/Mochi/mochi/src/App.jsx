@@ -13,10 +13,6 @@ export default class App extends Component {
       userID: "",
       username: "",
       admin: "",
-      formErrors: {email: "", password: ""},
-      emailValid: false,
-      passwordValid: false,
-      formValid: false,
     };
   }
 

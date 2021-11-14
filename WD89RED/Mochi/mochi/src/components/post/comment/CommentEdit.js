@@ -14,7 +14,7 @@ export default class CommentEdit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editComment: this.props.title,
+      editComment: "",
       modal: false,
     };
   }

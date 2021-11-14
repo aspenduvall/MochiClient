@@ -7,10 +7,12 @@ export default class CommentTable extends React.Component {
     super(props);
     this.state = {
       commentToUpdate: "",
+      username: "",
       modal: false,
     };
   }
   deleteComment = (comment) => {
+    debugger
     fetch(`http://localhost:3000/comments/delete/${comment.id}`, {
       method: "DELETE",
       headers: new Headers({
@@ -66,11 +68,16 @@ export default class CommentTable extends React.Component {
     const isAdmin = localStorage.getItem("admin");
     return this.props.comments.length > 0
       ? this.props.comments.map((comment, index) => {
+        this.props.comments.sort(function (a, b) {
+          return (
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          );
+        });
           const canEdit =
             comment.userId === Number(this.props.userID) || isAdmin === "true";
           return (
             <div class="comment" key={index}>
-              <sup>posted by {this.props.username}</sup>
+              <sup>posted by {this.props.username}, at {comment.createdAt}</sup>
               <p>{comment.comment}</p>
               {canEdit ? (
                 <div>
