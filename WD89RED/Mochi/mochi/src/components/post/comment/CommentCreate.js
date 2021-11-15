@@ -14,6 +14,7 @@ export default class CommentCreate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: "",
       comment: "",
       modal: false,
     };
@@ -24,6 +25,7 @@ export default class CommentCreate extends React.Component {
       method: "POST",
       body: JSON.stringify({
         comment: {
+          username: localStorage.getItem("username"),
           comment: this.state.comment,
           postId: this.props.postID,
         },
