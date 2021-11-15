@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&family=Oswald:wght@200&family=Roboto&display=swap");
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background: #39002d !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.wrapper {
+  width: 100vw !important;
+  margin: 0 auto;
+  margin-top: -40px;
+}
+
+.title {
+  padding-top: 140px !important;
+  width: 14vw;
+  margin: 0 auto !important;
+}
+
+.content {
+  width: 30vw !important;
+  background: #590046;
+  padding: 50px !important;
+  text-align: justify !important;
+  color: #ffffff;
+  border-radius: 30px;
+  margin-top: 7vh !important;
+  margin: 0 auto;
+}
+
+.contenttitle {
+  margin-top: 1.8vh !important;
+}
+
+.commentlinks {
+  display: inline;
+  float: right;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 5px;
+  font-size: 11pt;
+  transition: 1s ease-in-out;
+}
+
+.commentlinks:hover {
+  color: #C60074;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.logoutbutton {
+  float: right !important;
+  margin-right: 2vw;
+  margin-top: -7.5vh;
+  font-size: 20pt !important;
+}
+
+.postusername {
+  color: #C60074;
+  float: right;
+  padding-left: 40px;
+}
+
+.login {
+  width: 30vw !important;
+  margin-top: -7vh;
+  background: #590046;
+  padding: 50px !important;
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.entrybuttons {
+  font-size: 24pt !important;
+  width: 150px;
+  letter-spacing: 3px;
+}
+
+.postbutton {
+  background: #590046 !important;
+  width: 30vw !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  margin-left: 0px;
+  margin-top: -8.5vh;
+  font-size: 20pt !important;
+  margin-bottom: -80px;
+}
+
+.closebuttons {
+  float: right;
+}
+
+.postedit {
+  float: right;
+}
+
+.editbutton {
+  float: right !important;
+}
+
+.modal-content {
+  background: #590046 !important;
+  padding: 50px !important;
+  color: #ffffff;
+  border-radius: 30px !important;
+}
+
+.comment {
+  text-align: justify;
+  border: 1px solid #8e0057;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.postimage {
+  width: 470px;
+  margin-bottom: 30px;
+}
+
+.postimagezoom {
+  width: 665px;
+  margin: 0 auto !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  height: 100px;
+  margin: 100px;
+}
+
+sup {
+  color: #C60074;
+}
+
+input {
+  background: #8e0057 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+textarea {
+  background: #8e0057 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0px !important;
+  height: 200px;
+}
+
+button {
+  background: #8e0057 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 10px !important;
+  text-transform: lowercase !important;
+  font-size: 14pt !important;
+  letter-spacing: 1px;
+  font-family: "Oswald", sans-serif !important;
+}
+
+h1 {
+  font-family: "Hi Melody", cursive;
+  color: #ffffff;
+  font-size: 100pt !important;
+}
+
+h2 {
+  font-family: "Hi Melody", cursive;
+  color: #ffffff;
+  font-size: 72pt !important;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+h3 {
+  font-family: "Hi Melody", cursive;
+  color: #ffffff;
+  font-size: 32pt !important;
+}
+
+h4 {
+  font-family: "Hi Melody", cursive;
+  color: #ffffff;
+  font-size: 32pt !important;
+  margin-bottom: -20px !important;
+}
