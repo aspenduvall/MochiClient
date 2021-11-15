@@ -77,7 +77,7 @@ export default class CommentTable extends React.Component {
             comment.userId === Number(this.props.userID) || isAdmin === "true";
           return (
             <div class="comment" key={index}>
-              <sup>posted by {this.props.username}, at {comment.createdAt}</sup>
+              <sup>posted by {comment.username}, at {comment.createdAt}</sup>
               <p>{comment.comment}</p>
               {canEdit ? (
                 <div>

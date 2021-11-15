@@ -56,6 +56,7 @@ export default class PostTable extends React.Component {
           });
           const canEdit =
             post.userId === Number(this.props.userID) || isAdmin === "true";
+            console.log(post.user.username)
           return (
             <div class="content" key={index}>
               <p class="postusername">posted by {post.user.username}, at {post.createdAt}</p>
