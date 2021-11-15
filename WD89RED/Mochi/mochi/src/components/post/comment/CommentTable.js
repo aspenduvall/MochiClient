@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Modal, ModalBody, ModalHeader, Table } from "reactstrap";
 import CommentEdit from "./CommentEdit";
+import APIURL from "../../../helpers/environment";
 
 export default class CommentTable extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ export default class CommentTable extends React.Component {
   }
   deleteComment = (comment) => {
     debugger
-    fetch(`http://localhost:3000/comments/delete/${comment.id}`, {
+    fetch(`${APIURL}/comments/delete/${comment.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",
@@ -28,7 +29,7 @@ export default class CommentTable extends React.Component {
   };
 
   commentByPostID = (comment) => {
-    fetch(`http://localhost:3000/comments/${this.props.postID}`, {
+    fetch(`${APIURL}/comments/${this.props.postID}`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

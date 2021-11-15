@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import APIURL from "../../helpers/environment";
 
 export default class Signup extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class Signup extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3000/users/signup", {
+    fetch(`${APIURL}/users/signup`, {
       method: "POST",
       body: JSON.stringify({
         user: {

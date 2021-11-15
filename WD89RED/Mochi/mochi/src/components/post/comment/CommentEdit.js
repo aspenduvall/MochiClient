@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import APIURL from "../../../helpers/environment";
 
 export default class CommentEdit extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class CommentEdit extends React.Component {
   commentUpdate = (event, comment) => {
     event.preventDefault();
     fetch(
-      `http://localhost:3000/comments/edit/${this.props.commentToUpdate.id}`,
+      `${APIURL}/comments/edit/${this.props.commentToUpdate.id}`,
       {
         method: "PUT",
         body: JSON.stringify({

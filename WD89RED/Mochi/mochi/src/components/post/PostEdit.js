@@ -10,6 +10,7 @@ import {
   ModalBody,
 } from "reactstrap";
 import Uploading from "../Uploading";
+import APIURL from "../../helpers/environment";
 
 export default class PostEdit extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class PostEdit extends React.Component {
 
   postUpdate = (event, post) => {
     event.preventDefault();
-    fetch(`http://localhost:3000/posts/edit/${this.props.postToUpdate.id}`, {
+    fetch(`${APIURL}/posts/edit/${this.props.postToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         post: {

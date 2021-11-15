@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import APIURL from "../../../helpers/environment";
 
 export default class CommentCreate extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class CommentCreate extends React.Component {
   }
 
   handleSubmit = (e) => {
-    fetch("http://localhost:3000/comments/new", {
+    fetch(`${APIURL}/comments/new`, {
       method: "POST",
       body: JSON.stringify({
         comment: {

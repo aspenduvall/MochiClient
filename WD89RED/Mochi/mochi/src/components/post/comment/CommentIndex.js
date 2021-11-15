@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import CommentCreate from "./CommentCreate";
 import CommentTable from "./CommentTable";
+import APIURL from "../../../helpers/environment";
 
 export default class CommentIndex extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class CommentIndex extends React.Component {
   }
 
   fetchComments = () => {
-    fetch(`http://localhost:3000/comments/${this.props.postID}`, {
+    fetch(`${APIURL}/comments/${this.props.postID}`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

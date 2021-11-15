@@ -2,6 +2,7 @@ import React from "react";
 import { Table, Button, Modal, ModalBody, Form, FormGroup } from "reactstrap";
 import PostEdit from "./PostEdit";
 import CommentIndex from "./comment/CommentIndex";
+import APIURL from "../../helpers/environment";
 
 export default class PostTable extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class PostTable extends React.Component {
   }
 
   deletePost = (post) => {
-    fetch(`http://localhost:3000/posts/delete/${post.id}`, {
+    fetch(`${APIURL}/posts/delete/${post.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",

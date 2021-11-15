@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import PostCreate from "./PostCreate";
 import PostTable from "./PostTable";
+import APIURL from "../../helpers/environment";
 
 export default class PostIndex extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export default class PostIndex extends React.Component {
   }
 
   fetchPosts = () => {
-    fetch("http://localhost:3000/posts/", {
+    fetch(`${APIURL}/posts/`, {
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

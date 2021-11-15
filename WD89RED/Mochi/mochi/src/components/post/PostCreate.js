@@ -10,6 +10,7 @@ import {
   ModalBody,
 } from "reactstrap";
 import Uploading from "../Uploading";
+import APIURL from "../../helpers/environment";
 
 export default class PostCreate extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class PostCreate extends React.Component {
   }
 
   handleSubmit = (e) => {
-    fetch("http://localhost:3000/posts/new", {
+    fetch(`${APIURL}/posts/new`, {
       method: "POST",
       body: JSON.stringify({
         post: {
